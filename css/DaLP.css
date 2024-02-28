@@ -1,0 +1,1044 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+/* задний фон */
+body {
+    height: 100vh;
+    background-color: #000;
+    background-position: center;
+}
+/* все с вверхнией линией с кнопками */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    opacity: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    box-shadow: 0 5px 10px black;
+}
+/* всё с лого */
+header .logo {
+    font-size: 20px;
+    font-weight: 900;
+    color: #000;
+}
+/* расположение кнопок */
+header nav ul li {
+    position: relative;
+    float: left;
+}
+/* бургер меню span это палки*/
+.header__burger-btn {
+    display: none;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: aqua;
+    top: 4px;
+    left: 150px;
+}
+.header__burger-btn span {
+    position: absolute;
+    width: 90px;
+    height: 10px;
+    background-color: #fff;
+    left: 15px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-30px);
+}
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(30px);
+}
+/* анимации бургера */
+.header.open .header__burger-btn span {
+    background-color: #000; 
+}
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg); 
+}
+.header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg); 
+}
+/* цвет текст */
+header nav ul a {
+    padding: 15px;
+    color: #000;
+    font-size: 16px;
+    display: block;
+    font-weight: 700;
+}
+/* цвет заднего плана на тексте и цвет текста при наведении  */
+header nav ul li a:hover {
+    background: #000;
+    color: #fff;
+}
+/* меню закртое */
+nav ul li ul {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    width: 131px;
+    background: #fff;
+    display: none;
+}
+/* вкладки меню */
+nav ul li ul li {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+}
+/* вкладка меню вторая */
+nav ul li ul li ul {
+    width: 100%;
+    width: 131px;
+    top: 49px;
+    left: -1px;
+}
+/* при наведение показывает */
+nav ul li:hover > ul {
+    display: initial;
+}
+.more-detailed {
+    width: 303px;
+    height: 60px;
+    cursor: pointer;
+    border: none;
+    background: rgb(56,23,0);
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 23px;
+    letter-spacing: 3px;
+    border-radius: 40px;
+    outline: none;
+    margin-top: 500px;
+    margin-left: 120px;
+    position: absolute;
+    top: 0;
+}
+.theme button {
+    cursor: pointer;
+}
+#dark {
+    background: #fff;
+    border: #fff;
+    color: rgb(0,159,205);
+    font-size: 15px;
+    font-weight: 700;
+    height: 50px;
+    width: 130px;
+}
+#dark:hover {
+    background: rgb(0,159,205);
+    border: rgb(0,159,205);
+    color: #fff;  
+}
+#light {
+    background-color: #000;
+    border: #000;
+    color: rgb(0,159,205);
+    font-size: 14.1px;
+    font-weight: 700;
+    height: 50px;
+    width: 130px;
+}
+#light:hover {
+    background: rgb(0,159,205);
+    border: rgb(0,159,205);
+    color: #000;  
+}
+.object {
+    height: 120vh;
+    width: 100%;
+    background: rgb(0, 130, 167);
+}
+.object2 {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+}
+.object3 {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    z-index: 500;
+    top: 260px;
+    left: 700px;
+}
+.object4 {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    z-index: 500;
+    top: 615px;
+    left: 700px;
+}
+.object5 {
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    background: rgb(0,159,205);
+    position: absolute;
+    z-index: 500;
+    top: 1050px;
+    left: 700px;
+}
+h1 {
+    text-align: center;
+    top: 50%;
+    transform: translateY(33%);
+    color: rgb(0,159,205);
+}
+h3 {
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    transform: translateY(33%);
+    font-size: 35px;
+}
+.text1 {
+    position: absolute;
+    top: 30px;
+    left: 400px;
+    padding: 15px;
+    color: #fff;
+    font-size: 45px;
+    display: block;
+    font-weight: 1000;
+    letter-spacing: -5px;
+}
+.text2 {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    padding: 15px;
+    color: #fff;
+    font-size: 35px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 1200px;
+}
+.text3 {
+    position: absolute;
+    top: 250px;
+    left: 800px;
+    padding: 15px;
+    color: #fff;
+    font-size: 35px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 380px;
+}
+.text4 {
+    position: absolute;
+    top: 330px;
+    left: 670px;
+    padding: 15px;
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 600px;
+}
+.text5 {
+    position: absolute;
+    top: 600px;
+    left: 800px;
+    padding: 15px;
+    color: #fff;
+    font-size: 35px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 380px;
+}
+.text6 {
+    position: absolute;
+    top: 675px;
+    left: 670px;
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 600px;
+}
+.text7 {
+    position: absolute;
+    top: 760px;
+    left: 665px;
+    padding: 15px;
+    color: #000;
+    font-size: 35px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 650px;
+}
+.text8 {
+    position: absolute;
+    top: 1040px;
+    left: 800px;
+    padding: 15px;
+    color: #000;
+    font-size: 35px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 300px;
+}
+.text9 {
+    position: absolute;
+    top: 1110px;
+    left: 670px;
+    padding: 15px;
+    color: #000;
+    font-size: 35px;
+    display: block;
+    font-weight: 1000;
+    word-wrap: break-word;
+    width: 670px;
+}
+.images1 {
+    position: absolute;
+    width: 650px;
+    height: 350px;
+    margin-top: -1250px;
+    margin-left: -20px;
+}
+.images2 {
+    position: absolute;
+    width: 650px;
+    height: 350px;
+    margin-top: -830px;
+    margin-left: -20px;
+}
+.images3 {
+    position: absolute;
+    width: 650px;
+    height: 350px;
+    margin-top: -400px;
+    margin-left: -20px;
+}
+
+@media (max-width: 1920px) and (max-height: 1080px) {
+    header .logo {
+        font-size: 50px;
+        font-weight: 900;
+        color: #000;
+    }
+    header nav ul a {
+        padding: 15px;
+        color: #000;
+        font-size: 36px;
+        display: block;
+        font-weight: 700;
+    }
+    nav ul li ul {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        width: 260px;
+        background: #fff;
+        display: none;
+    }
+    nav ul li ul li ul {
+        width: 100%;
+        width: 260px;
+        top: 70px;
+        left: -1px;
+    }
+    #dark {
+        background: #fff;
+        border: #fff;
+        color: rgb(0,159,205);
+        font-size: 35px;
+        font-weight: 700;
+        height: 60px;
+        width: 260px;
+    }
+    #light {
+        background-color: #000;
+        border: #000;
+        color: rgb(0,159,205);
+        font-size: 34.1px;
+        font-weight: 700;
+        height: 60px;
+        width: 260px;
+    }
+    .object3 {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 500;
+        top: 400px;
+        left: 800px;
+    }
+    .object4 {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 500;
+        top: 1000px;
+        left: 800px;
+    }
+    .object5 {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        background: rgb(0,159,205);
+        position: absolute;
+        z-index: 500;
+        top: 1600px;
+        left: 800px;
+    }
+    h1 {
+        text-align: center;
+        top: 50%;
+        transform: translateY(90%);
+        color: #fff;
+    }
+    h3 {
+        color: #fff;
+        text-align: center;
+        top: 50%;
+        transform: translateY(70%);
+        font-size: 40px;
+    }
+    .text1 {
+        position: absolute;
+        top: 80px;
+        left: 650px;
+        padding: 15px;
+        color: #fff;
+        font-size: 50px;
+        display: block;
+        font-weight: 1000;
+        letter-spacing: -5px;
+    }
+    .text2 {
+        position: absolute;
+        top: 150px;
+        left: 300px;
+        padding: 15px;
+        color: #fff;
+        font-size: 40px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 1400px;
+    }
+    .text3 {
+        position: absolute;
+        top: 400px;
+        left: 930px;
+        padding: 15px;
+        color: #fff;
+        font-size: 40px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 500px;
+    }
+    .text4 {
+        position: absolute;
+        top: 500px;
+        left: 800px;
+        padding: 15px;
+        color: #fff;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 600px;
+    }
+    .text5 {
+        position: absolute;
+        top: 1000px;
+        left: 930px;
+        padding: 15px;
+        color: #fff;
+        font-size: 40px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 500px;
+    }
+    .text6 {
+        position: absolute;
+        top: 1100px;
+        left: 800px;
+        padding: 10px;
+        color: #fff;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 800px;
+    }
+    .text7 {
+        position: absolute;
+        top: 1180px;
+        left: 800px;
+        padding: 15px;
+        color: #000;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 800px;
+    }
+    .text8 {
+        position: absolute;
+        top: 1600px;
+        left: 920px;
+        padding: 15px;
+        color: #000;
+        font-size: 40px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 500px;
+    }
+    .text9 {
+        position: absolute;
+        top: 1710px;
+        left: 800px;
+        padding: 15px;
+        color: #000;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 670px;
+    }
+    .images1 {
+        position: absolute;
+        width: 650px;
+        height: 350px;
+        margin-top: -1750px;
+        margin-left: -20px;
+    }
+    .images2 {
+        position: absolute;
+        width: 650px;
+        height: 350px;
+        margin-top: -1150px;
+        margin-left: -20px;
+    }
+    .images3 {
+        position: absolute;
+        width: 650px;
+        height: 350px;
+        margin-top: -570px;
+        margin-left: -20px;
+    }
+}
+@media (max-width: 1366px) and (max-height: 768px) {
+    body {
+        height: 100vh;
+        background-color: #000;
+        background-position: center;
+    }
+    /* все с вверхнией линией с кнопками */
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        opacity: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8%;
+        box-shadow: 0 5px 10px black;
+    }
+    /* всё с лого */
+    header .logo {
+        font-size: 20px;
+        font-weight: 900;
+        color: #000;
+    }
+    /* расположение кнопок */
+    header nav ul li {
+        position: relative;
+        float: left;
+    }
+    /* бургер меню span это палки*/
+    .header__burger-btn {
+        display: none;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: aqua;
+        top: 4px;
+        left: 150px;
+    }
+    .header__burger-btn span {
+        position: absolute;
+        width: 90px;
+        height: 10px;
+        background-color: #fff;
+        left: 15px;
+        transition: transform .5s, opacity .5s, background-color .5s;
+    }
+    .header__burger-btn span:nth-child(1) {
+        transform: translateY(-30px);
+    }
+    .header__burger-btn span:nth-child(3) {
+        transform: translateY(30px);
+    }
+    /* анимации бургера */
+    .header.open .header__burger-btn span {
+        background-color: #000; 
+    }
+    .header.open .header__burger-btn span:nth-child(1) {
+        transform: translateY(0) rotate(45deg); 
+    }
+    .header.open .header__burger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    .header.open .header__burger-btn span:nth-child(3) {
+        transform: translateY(0) rotate(-45deg); 
+    }
+    /* цвет текст */
+    header nav ul a {
+        padding: 15px;
+        color: #000;
+        font-size: 16px;
+        display: block;
+        font-weight: 700;
+    }
+    /* цвет заднего плана на тексте и цвет текста при наведении  */
+    header nav ul li a:hover {
+        background: #000;
+        color: #fff;
+    }
+    /* меню закртое */
+    nav ul li ul {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        width: 131px;
+        background: #fff;
+        display: none;
+    }
+    /* вкладки меню */
+    nav ul li ul li {
+        width: 100%;
+        border: 1px solid rgba(0,0,0,.1);
+    }
+    /* вкладка меню вторая */
+    nav ul li ul li ul {
+        width: 100%;
+        width: 131px;
+        top: 49px;
+        left: -1px;
+    }
+    /* при наведение показывает */
+    nav ul li:hover > ul {
+        display: initial;
+    }
+    .more-detailed {
+        width: 303px;
+        height: 60px;
+        cursor: pointer;
+        border: none;
+        background: rgb(56,23,0);
+        color: white;
+        text-transform: uppercase;
+        font-family: Arial;
+        font-size: 23px;
+        letter-spacing: 3px;
+        border-radius: 40px;
+        outline: none;
+        margin-top: 500px;
+        margin-left: 120px;
+        position: absolute;
+        top: 0;
+    }
+    .theme button {
+        cursor: pointer;
+    }
+    #dark {
+        background: #fff;
+        border: #fff;
+        color: rgb(0,159,205);
+        font-size: 15px;
+        font-weight: 700;
+        height: 50px;
+        width: 130px;
+    }
+    #dark:hover {
+        background: rgb(0,159,205);
+        border: rgb(0,159,205);
+        color: #fff;  
+    }
+    #light {
+        background-color: #000;
+        border: #000;
+        color: rgb(0,159,205);
+        font-size: 14.1px;
+        font-weight: 700;
+        height: 50px;
+        width: 130px;
+    }
+    #light:hover {
+        background: rgb(0,159,205);
+        border: rgb(0,159,205);
+        color: #000;  
+    }
+    .object {
+        height: 120vh;
+        width: 100%;
+        background: rgb(0, 130, 167);
+    }
+    .object2 {
+        height: 100vh;
+        width: 100%;
+        background: #000;
+    }
+    .object3 {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 500;
+        top: 260px;
+        left: 700px;
+    }
+    .object4 {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        z-index: 500;
+        top: 615px;
+        left: 700px;
+    }
+    .object5 {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        background: rgb(0,159,205);
+        position: absolute;
+        z-index: 500;
+        top: 1050px;
+        left: 700px;
+    }
+    h1 {
+        text-align: center;
+        top: 50%;
+        transform: translateY(33%);
+        color: rgb(0,159,205);
+    }
+    h3 {
+        color: #fff;
+        text-align: center;
+        top: 50%;
+        transform: translateY(33%);
+        font-size: 35px;
+    }
+    .text1 {
+        position: absolute;
+        top: 30px;
+        left: 400px;
+        padding: 15px;
+        color: #fff;
+        font-size: 45px;
+        display: block;
+        font-weight: 1000;
+        letter-spacing: -5px;
+    }
+    .text2 {
+        position: absolute;
+        top: 100px;
+        left: 120px;
+        padding: 15px;
+        color: #fff;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 1200px;
+    }
+    .text3 {
+        position: absolute;
+        top: 250px;
+        left: 800px;
+        padding: 15px;
+        color: #fff;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 380px;
+    }
+    .text4 {
+        position: absolute;
+        top: 330px;
+        left: 670px;
+        padding: 15px;
+        color: #fff;
+        font-size: 30px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 600px;
+    }
+    .text5 {
+        position: absolute;
+        top: 600px;
+        left: 800px;
+        padding: 15px;
+        color: #fff;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 380px;
+    }
+    .text6 {
+        position: absolute;
+        top: 675px;
+        left: 670px;
+        padding: 10px;
+        color: #fff;
+        font-size: 30px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 600px;
+    }
+    .text7 {
+        position: absolute;
+        top: 760px;
+        left: 665px;
+        padding: 15px;
+        color: #000;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 650px;
+    }
+    .text8 {
+        position: absolute;
+        top: 1040px;
+        left: 800px;
+        padding: 15px;
+        color: #000;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 300px;
+    }
+    .text9 {
+        position: absolute;
+        top: 1110px;
+        left: 670px;
+        padding: 15px;
+        color: #000;
+        font-size: 35px;
+        display: block;
+        font-weight: 1000;
+        word-wrap: break-word;
+        width: 670px;
+    }
+    .images1 {
+        position: absolute;
+        width: 650px;
+        height: 350px;
+        margin-top: -1250px;
+        margin-left: -20px;
+    }
+    .images2 {
+        position: absolute;
+        width: 650px;
+        height: 350px;
+        margin-top: -830px;
+        margin-left: -20px;
+    }
+    .images3 {
+        position: absolute;
+        width: 650px;
+        height: 350px;
+        margin-top: -400px;
+        margin-left: -20px;
+    }  
+}
+@media only screen and (max-device-width: 459px) {
+    header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8%;
+        box-shadow: 0 5px 10px black;
+        height: 150px;
+    }
+    header .logo {
+        font-size: 80px;
+        font-weight: 900;
+        color: #000;
+    }
+    header nav ul li {
+        position: relative;
+    }
+    header nav ul a {
+        line-height: 150px;
+        padding: 10px;
+        color: #000;
+        font-size: 70px;
+        display: block;
+        font-weight: 1000;
+        width: 700px;
+    }
+    header nav ul li a:hover {
+        background: #000;
+        color: #fff;
+    }
+    nav ul li ul {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        width: 555px;
+        background: #fff;
+        display: none;
+    }
+    nav ul li ul li {
+        width: 100%;
+        border: 1px solid rgba(0,0,0,.1);
+    }
+    nav ul li ul li ul {
+        width: 100%;
+        width: 555px;
+        top: 160px;
+    }
+    nav ul li:hover > ul {
+        display: initial;
+    }
+    .header__burger-btn {
+        display: block;
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border: none;
+        background-color: rgb(0,159,205);
+        top: 20px;
+        left: 1100px;
+        z-index: 2;
+    }
+    .navT {
+        position: absolute;
+        left: 1280px;
+        top: 0;
+        background-color: #fff;
+        padding: 150px 0px 0px 0px;
+        width: 560px;
+        transition: transform 0.5s;
+    }
+    .header.open nav {
+        transform: translateX(-100%);
+    }
+    .more-detailed {
+        width: 450px;
+        height: 100px;
+        cursor: pointer;
+        border: none;
+        background: rgb(56,23,0);
+        color: white;
+        text-transform: uppercase;
+        font-family: Arial;
+        font-size: 50px;
+        letter-spacing: 3px;
+        border-radius: 40px;
+        outline: none;
+        margin-top: 900px;
+        margin-left: 20px;
+        position: absolute;
+        top: 0;
+    }
+    .theme button {
+        cursor: pointer;
+    }
+    #dark {
+        background: #fff;
+        border: #fff;
+        color: rgb(0,159,205);
+        font-size: 70px;
+        font-weight: 700;
+        height: 150px;
+        width: 555px;
+        font-weight: 1000;
+    }
+    #dark:hover {
+        background: rgb(0,159,205);
+        border: rgb(0,159,205);
+        color: #fff;  
+    }
+    #light {
+        background-color: #000;
+        border: #000;
+        color: rgb(0,159,205);
+        font-size: 70px;
+        font-weight: 700;
+        height: 150px;
+        width: 555px;
+        font-weight: 1000;
+    }
+    #light:hover {
+        background: rgb(0,159,205);
+        border: rgb(0,159,205);
+        color: #000;  
+    }
+    h1 {
+        text-align: center;
+        top: 50%;
+        transform: translateY(55%);
+        color: #fff;
+        font-size: 70px;
+    }
+}
+
+
+
